@@ -6,23 +6,11 @@ const Footer = () => {
       <div className="max-w-md mx-auto px-4 pt-16 bg-black">
         {/* Logo and email signup */}
         <div className="mb-10">
-          <h2 className="font-bold mb-4 text-2xl text-left">Debloat Mastery®</h2>
+          
         </div>
         
         {/* Help Links */}
-        <div className="mb-10">
-          <h3 className="font-bold mb-4">Need Help?</h3>
-          <ul className="opacity-75 text-sm space-y-3">
-            <li><Link to="/help-center" className="hover:text-gray-400">Help Center</Link></li>
-            <li><Link to="/track-order" className="hover:text-gray-400">Track Your Order</Link></li>
-            <li><Link to="/shipping-delivery" className="hover:text-gray-400">Shipping & Delivery</Link></li>
-            <li><Link to="/return-refund" className="hover:text-gray-400">Return & Refund Policy</Link></li>
-            <li><Link to="/reviews" className="hover:text-gray-400">Customer Reviews</Link></li>
-            <li><Link to="/privacy-policy" className="hover:text-gray-400">Privacy Policy</Link></li>
-            <li><Link to="/terms-of-service" className="hover:text-gray-400">Terms of Service</Link></li>
-            <li><Link to="/how-to-use" className="hover:text-gray-400">How to Use</Link></li>
-          </ul>
-        </div>
+        
         
         {/* Legal Disclaimer */}
         <div className="border-t border-gray-700 pt-6 mb-8">
