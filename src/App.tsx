@@ -16,8 +16,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* Default home page */}
-          <Route path="/" element={<LinkInBio />} />
+          {/* Default home page - redirects to India */}
+          <Route path="/" element={<Index />} />
           <Route path="/link-in-bio" element={<LinkInBio />} />
           
           {/* USA page */}
