@@ -1,19 +1,23 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const CTAButton: React.FC<{
   onClick: () => void;
   paypalLink?: string;
 }> = ({ onClick, paypalLink }) => {
   const [isMounted, setIsMounted] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
   const handleClick = () => {
-    window.open('https://rzp.io/rzp/g3w6qRIO', '_blank', 'noopener,noreferrer');
+    const isIndiaPage = location.pathname === '/india' || location.pathname === '/';
+    const link = isIndiaPage ? 'https://rzp.io/rzp/wqjBY2Br' : 'https://rzp.io/rzp/g3w6qRIO';
+    window.open(link, '_blank', 'noopener,noreferrer');
     onClick();
   };
 

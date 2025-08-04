@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 const GOLD_GRADIENT = "bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400";
 const BottomOfferBar: React.FC<{
   paypalLink?: string;
@@ -9,6 +10,7 @@ const BottomOfferBar: React.FC<{
   const [seconds, setSeconds] = useState(59);
   const [minutes, setMinutes] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const location = useLocation();
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setSeconds(prev => {
@@ -27,10 +29,13 @@ const BottomOfferBar: React.FC<{
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minutes]);
   const handleButtonClick = () => {
+    const isIndiaPage = location.pathname === '/india' || location.pathname === '/';
+    const defaultLink = isIndiaPage ? 'https://rzp.io/rzp/wqjBY2Br' : 'https://www.paypal.com/ncp/payment/L8JHEPL6RSSPJ';
+    
     if (paypalLink) {
       window.open(paypalLink, "_blank", "noopener,noreferrer");
     } else {
-      window.open("https://www.paypal.com/ncp/payment/L8JHEPL6RSSPJ", "_blank", "noopener,noreferrer");
+      window.open(defaultLink, "_blank", "noopener,noreferrer");
     }
   };
   return <div className="fixed left-0 bottom-0 z-50 w-full" style={{
