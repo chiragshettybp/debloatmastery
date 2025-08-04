@@ -2,7 +2,7 @@ import React from 'react';
 import burgerImage from '../assets/burger.png';
 const BurgerComparisonSection = () => {
   return <div className="w-full px-4 mb-4">
-      <div className="relative bg-gradient-to-br from-yellow-900/20 to-amber-900/20 backdrop-blur-sm border-2 border-yellow-500/30 rounded-xl p-4 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-yellow-900/20 to-amber-900/20 backdrop-blur-sm border-2 border-yellow-500/30 rounded-xl p-2 overflow-hidden">
         {/* Animated background glow */}
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/20 via-amber-600/20 to-yellow-600/20 animate-pulse"></div>
         
